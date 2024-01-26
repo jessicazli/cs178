@@ -1,3 +1,4 @@
+# Concept 1: Render Template
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,7 +15,7 @@ class Todo(db.Model):
     title = db.Column(db.String(100))
     complete = db.Column(db.Boolean)
 
-
+# Concept 2: App Routes
 @app.route("/")
 def home():
     todo_list = Todo.query.all()
